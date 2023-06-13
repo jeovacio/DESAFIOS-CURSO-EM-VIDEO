@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: darkgrey;
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        main {
+            position: absolute;
+            top: 45%;
+            left: 22%;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+
+        button {
+            background-color: #0f5abd;
+            color: #ffffff;
+            border: none;
+            padding: 20px;
+            margin: 5px;
+            border-radius: 10px;
+            box-shadow: 0 0 0 2px;
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            color: #0f5abd;
+            box-shadow: 0 0 10px 4px #0f5abd;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Desafio das Mensagens</h1>
+        <button id="msg1" onclick="clicar1()">Clique aqui para exibir a mensagem</button>
+        <button id="msg2" onclick="clicar2()">Clique aqui para exibir a mensagem</button>
+        <button id="msg3" onclick="clicar3()">Clique aqui para exibir a mensagem</button>
+    </main>
+
+    <script>
+
+        var originalMsg1 = "Clique aqui para exibir a mensagem";
+        var originalMsg2 = "Clique aqui para exibir a mensagem";
+        var originalMsg3 = "Clique aqui para exibir a mensagem";
+
+        function clicar1() {
+            var botao1 = document.getElementById("msg1");
+            botao1.textContent = "Parabéns você exibiu a mensagem :)";
+            alert("Você clicou no 1º botão");
+
+            setTimeout(function() {
+                botao1.textContent = originalMsg1;
+            }, 3000);
+        }
+
+        
+
+         function clicar2() {
+            var botao2 = document.getElementById("msg2");
+            botao2.textContent = "Parabéns você exibiu a mensagem :)";
+            alert("Você clicou no 2º botão");
+
+             setTimeout(function() {
+                botao2.textContent = originalMsg1;
+            }, 3000);
+        }
+
+         function clicar3() {
+            var botao3 = document.getElementById("msg3");
+            botao3.textContent = "Parabéns você exibiu a mensagem :)";
+            alert("Você clicou no 3º botão");
+
+             setTimeout(function() {
+                botao3.textContent = originalMsg1;
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
