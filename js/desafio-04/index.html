@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do valor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(103, 241, 103);
+            color: white;
+            text-align: center;
+        }
+
+        main {
+            position: absolute;
+            top: 45%;
+            left: 40%;
+        }
+
+        button {
+            padding: 20px 50px;
+            margin-top: 20px;
+            transition: 0.5s ease-in-out;
+        }
+
+        button:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calcule o seu troco</h1>
+        <button onclick="calcular()">Calcular Troco</button>
+    </main>
+        
+    <script>
+        function calcular(){
+            var produto = prompt("Diga que produto está comprando")
+            var valor = prompt("Diga quanto custa o produto")
+            var dinheiro = prompt("Diga quanto deu em especie")
+            var resultado = dinheiro - valor
+            if (resultado < 0){
+                alert(`infelizmente, você ficou devendo ${resultado*(-1)} Reais!`)
+            } else {
+                alert(`Você irá receber, ${resultado} Reais de troco!`)
+            }
+        }
+    </script>
+</body>
+</html>
